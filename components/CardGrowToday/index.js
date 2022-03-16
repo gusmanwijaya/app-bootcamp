@@ -1,7 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
-export default function CardGrowToday({ price, img, title, category, desc }) {
+export default function CardGrowToday({
+  id,
+  price,
+  img,
+  title,
+  category,
+  date,
+}) {
   return (
     <div className="col-lg-3 col-md-6 col-12">
       <div className="card-grow h-100">
@@ -10,8 +17,8 @@ export default function CardGrowToday({ price, img, title, category, desc }) {
         <div className="card-content">
           <div className="card-title">{title}</div>
           <div className="card-subtitle">{category}</div>
-          <div className="description">{desc}</div>
-          <Link href="/details">
+          <div className="description">{date}</div>
+          <Link href={`/detail/${id}`}>
             <a className="stretched-link" />
           </Link>
         </div>
