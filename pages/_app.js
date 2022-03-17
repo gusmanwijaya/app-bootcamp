@@ -2,6 +2,7 @@ import "../styles/scss/main.css";
 import Script from "next/script";
 import { Provider } from "react-redux";
 import { useStore } from "../redux/store";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -19,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         crossorigin="anonymous"
       />
       <Component {...pageProps} />
+      <Toaster />
     </Provider>
   );
 }

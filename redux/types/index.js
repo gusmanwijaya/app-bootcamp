@@ -1,1 +1,4 @@
 export const GET_LANDING_PAGE = "GET_LANDING_PAGE";
+export const GET_DETAIL_PAGE = "GET_DETAIL_PAGE";
+export const SET_FORM_SIGN_UP = "SET_FORM_SIGN_UP";
+export const GET_SESSION = "GET_SESSION";

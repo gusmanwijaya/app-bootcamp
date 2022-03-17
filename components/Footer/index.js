@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <Link href="/">
           <a>
-            <img src="assets/images/logo.svg" alt="semina" />
+            <img src="/assets/images/logo.svg" alt="semina" />
           </a>
         </Link>
         <div className="mt-3 d-flex flex-row flex-wrap footer-content align-items-baseline">

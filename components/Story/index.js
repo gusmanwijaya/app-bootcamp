@@ -4,7 +4,7 @@ export default function Story() {
     <section className="stories">
       <div className="d-flex flex-row justify-content-center align-items-center container">
         <img
-          src="assets/images/story.png"
+          src="/assets/images/story.png"
           alt="semina"
           className="d-none d-lg-block"
           width="515"

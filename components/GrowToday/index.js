@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLandingPage } from "../../redux/actions";
+
 import CardGrowToday from "../CardGrowToday";
 
 export default function GrowToday({ text, title }) {
@@ -20,17 +21,26 @@ export default function GrowToday({ text, title }) {
         </div>
         <div className="title">{title}</div>
         <div className="mt-5 row gap">
-          {event.map((value, index) => (
-            <CardGrowToday
-              key={index}
-              id={value?._id}
-              price={value?.price}
-              img={`${NEXT_PUBLIC_API}/${value?.cover}`}
-              title={value?.title}
-              category={value?.category?.name}
-              date={value?.date}
-            />
-          ))}
+          {event.length > 0 ? (
+            event.map((value, index) => (
+              <CardGrowToday
+                key={index}
+                id={value?._id}
+                price={value?.price}
+                img={`${NEXT_PUBLIC_API}/${value?.cover}`}
+                title={value?.title}
+                category={value?.category?.name}
+                date={value?.date}
+                city={value?.city}
+              />
+            ))
+          ) : (
+            <div>
+              <p style={{ textAlign: "center", fontSize: "20px" }}>
+                Oopss, events are currently unavailable!
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
